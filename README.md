@@ -1,45 +1,142 @@
-## Description
+# congenial-doodle
 
-This project is a 3D visualization of Earth created using [Three.js](https://threejs.org/), a powerful WebGL-based 3D engine. The scene features a realistic Earth model with detailed surface textures, city lights, clouds, and a glow effect that simulates atmospheric scattering. The project also includes a starfield background and interactive controls, allowing users to explore the Earth from various perspectives.
+A stunning **3D Earth visualization** built with Three.js. This project creates a photorealistic, interactive Earth model with detailed surface textures, realistic atmospheric effects, cloud layers, and a starfield background. Perfect for showcasing 3D/WebGL skills and creative front-end development.
 
-## Features
+## 🎯 Features
 
-- **Realistic Earth Model:**
-  - High-resolution textures for Earth's surface, specular highlights, bump mapping for terrain, and night-time city lights.
-- **Atmospheric Glow:**
-  - Utilizes a Fresnel effect to simulate the Earth's atmospheric glow, enhancing the realism of the scene.
-- **Dynamic Cloud Layer:**
-  - Adds a transparent, rotating cloud layer above the Earth's surface, giving a more lifelike appearance.
-- **Interactive Controls:**
-  - OrbitControls enable users to rotate, zoom, and pan around the Earth for an interactive experience.
-- **Starfield Background:**
-  - A procedurally generated starfield surrounds the Earth, adding visual depth to the scene.
-- **Responsive Design:**
-  - The visualization adapts to different screen sizes and aspect ratios, ensuring a consistent experience across devices.
+- **Photorealistic Earth Model**: High-resolution textures for surface, specular highlights for water reflection, bump mapping for terrain detail, and night-time city lights
+- **Atmospheric Glow**: Fresnel effect simulates realistic atmospheric scattering around Earth
+- **Dynamic Cloud Layer**: Transparent, rotating cloud layer above Earth surface for lifelike appearance
+- **Interactive Controls**: OrbitControls enable smooth rotation, zoom, and panning around the Earth
+- **Starfield Background**: Procedurally generated starfield creates depth and space context
+- **Responsive Design**: Adapts seamlessly across different screen sizes and aspect ratios
+- **Realistic Rendering**: ACESFilmicToneMapping for cinematic color grading
 
-## Installation
+## 🛠️ Tech Stack
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dhairyakpatel/congenial-doodle.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd congenial-doodle
-   ```
-3. Open `index.html` in your web browser to view the 3D Earth visualization.
+- **3D Engine:** Three.js (WebGL)
+- **Controls:** OrbitControls
+- **Post-Processing:** EffectComposer, RenderPass, UnrealBloomPass (for atmospheric glow)
+- **Textures:** Custom 4K+ resolution Earth textures (surface, specular, bump, night lights, clouds)
+- **Rendering:** WebGLRenderer with tone mapping and color space management
 
-## Usage
+## 📁 Project Structure
 
-- Use your mouse to interact with the scene:
-  - Rotate: Click and drag to rotate the Earth.
-  - Zoom: Scroll to zoom in and out.
-  - Pan: Right-click and drag to pan around the scene.
+```
+congenial-doodle/
+├── index.html                    # Main HTML entry point
+├── index.js                      # Main 3D scene setup and rendering
+├── src/
+│   ├── getStarfield.js          # Procedural starfield generation
+│   └── getFresnelMat.js         # Fresnel effect material for atmospheric glow
+├── textures/                     # Earth texture files (4K+)
+│   ├── earth_surface.png        # Daytime surface
+│   ├── earth_specular.png        # Water reflection
+│   ├── earth_bump.png           # Terrain detail
+│   ├── earth_night.png          # City lights
+│   └── clouds.png               # Cloud layer
+├── README.md                    # This file
+└── package.json                  # npm dependencies (Three.js)
+```
 
-## Future Enhancements
+## 🚀 Getting Started
 
-This project can be expanded with additional features, such as:
+### Prerequisites
 
-- Animated weather patterns on the Earth's surface.
-- Satellite data visualization (e.g., displaying satellite paths around the Earth).
-- Visualization of other planetary bodies in the solar system.
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Optional: Node.js and npm (if using build tools)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd congenial-doodle
+
+# Install dependencies (if package.json exists)
+npm install
+```
+
+### Running
+
+**Option 1: Direct HTML (No Build Required)**
+
+```bash
+# macOS
+open index.html
+
+# Windows
+start index.html
+
+# Linux
+xdg-open index.html
+```
+
+**Option 2: HTTP Server (Recommended)**
+
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+
+# Using PHP
+php -S localhost:8000
+```
+
+Then open `http://localhost:8000` in your browser.
+
+## 🎬 Demo
+
+The visualization features:
+
+- A photorealistic 3D Earth with realistic textures and atmospheric effects
+- Rotating cloud layer for dynamic, living appearance
+- Procedurally generated starfield for depth
+- Smooth orbit controls for interactive exploration
+- Responsive design that adapts to any screen size
+
+## 🎨 Customization
+
+### Textures
+
+The textures/ directory contains:
+- `earth_surface.png` - Daytime surface texture
+- `earth_specular.png` - Water reflection highlights
+- `earth_bump.png` - Terrain bump mapping
+- `earth_night.png` - Night-time city lights
+- `clouds.png` - Cloud layer
+
+Replace these with your own textures or higher resolution versions.
+
+### Effects
+
+Edit `index.js` to adjust:
+- Cloud rotation speed
+- Bloom effect strength
+- Camera rotation speed
+- Lighting and shadows
+
+### Starfield
+
+Edit `src/getStarfield.js` to customize:
+- Star distribution
+- Star brightness
+- Starfield density
+
+## 🧪 Future Work
+
+- Add solar system toggle (show/hide other planets)
+- Add real-time satellite tracking overlay
+- Add weather pattern animations (storms, fronts)
+- Add seasonal changes (tilt Earth axis for seasons)
+- Add camera presets for famous locations
+- Add VR/AR support (WebXR)
+- Add web audio API for ambient space sounds
+- Add time-lapse mode (day/night cycle)
+- Add interactive data visualization (population, temperature, etc.)
+
+## 📄 License
+
+MIT
