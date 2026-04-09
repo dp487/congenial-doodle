@@ -30,11 +30,12 @@ congenial-doodle/
 │   ├── getStarfield.js          # Procedural starfield generation
 │   └── getFresnelMat.js         # Fresnel effect material for atmospheric glow
 ├── textures/                     # Earth texture files (4K+)
-│   ├── earth_surface.png        # Daytime surface
-│   ├── earth_specular.png        # Water reflection
-│   ├── earth_bump.png           # Terrain detail
-│   ├── earth_night.png          # City lights
-│   └── clouds.png               # Cloud layer
+│   ├── 00_earthmap1k.jpg        # Earth surface map
+│   ├── 01_earthbump1k.jpg       # Bump mapping for terrain
+│   ├── 02_earthspec1k.jpg       # Specular highlights (water reflection)
+│   ├── 03_earthlights1k.jpg     # Night-time city lights
+│   ├── 04_earthcloudmap.jpg     # Cloud layer
+│   └── 05_earthcloudmaptrans.jpg # Transparent cloud layer
 ├── README.md                    # This file
 └── package.json                  # npm dependencies (Three.js)
 ```
@@ -101,12 +102,13 @@ The visualization features:
 
 ### Textures
 
-The textures/ directory contains:
-- `earth_surface.png` - Daytime surface texture
-- `earth_specular.png` - Water reflection highlights
-- `earth_bump.png` - Terrain bump mapping
-- `earth_night.png` - Night-time city lights
-- `clouds.png` - Cloud layer
+The `textures/` directory contains:
+- `00_earthmap1k.jpg` - Earth surface map (daytime)
+- `01_earthbump1k.jpg` - Bump mapping for terrain detail
+- `02_earthspec1k.jpg` - Specular highlights for water reflection
+- `03_earthlights1k.jpg` - Night-time city lights
+- `04_earthcloudmap.jpg` - Cloud layer
+- `05_earthcloudmaptrans.jpg` - Transparent cloud layer
 
 Replace these with your own textures or higher resolution versions.
 
