@@ -144,3 +144,14 @@ Edit `src/getStarfield.js` to customize:
 MIT
 
 <!-- Reviewed and verified against source code on 2026-05-27 -->
+
+## Controls & Interaction
+- Left mouse drag: Rotate Earth
+- Scroll wheel: Zoom in/out
+- Right mouse drag: Pan the view
+- The starfield and clouds rotate independently for added realism
+
+## Performance Notes
+- Uses high-resolution 4K textures — best experienced on modern GPUs
+- Post-processing (UnrealBloomPass) adds atmospheric glow at a small performance cost
+
